@@ -1,4 +1,5 @@
 import iconStar from "./assets/icon-star.svg"
+import ilustration from "./assets/illustration-thank-you.svg"
 import { useState } from "react"
 
 export function App() {
@@ -18,11 +19,8 @@ export function App() {
     setRateNote(value)
   }
 
-  console.log(rateNote)
-
   return (
-    <div className="h-svh bg-very-dark-blue text-white flex justify-center items-center px-6">
-      {submited === false ?(
+      submited === false? (
           <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8 rounded-2xl font-overpass">
           <div className="bg-dark-blue p-4 w-fit rounded-full mb-4">
             <img src={iconStar} alt="icone da estrela" />
@@ -40,11 +38,12 @@ export function App() {
             <input type="button" value={5} className="rounded-full bg-dark-blue w-10.5 h-10.5 text-sm text-medium-grey font-bold focus:bg-medium-grey focus:text-white" onClick={() => handleChangeRateNote(5)}/>
           </div>
 
-          <button className="bg-orange w-full py-3 rounded-3xl uppercase font-bold tracking1 focus:bg-white focus:text-orange" onClick={handleSubmit}>Enviar</button>
+          <button class="bg-orange w-full py-3 rounded-3xl uppercase font-bold tracking1 focus:bg-white focus:text-orange" onClick={handleSubmit}>Enviar</button>
         </div>
       ) : (
-        <p>oi</p>
-      )}
-    </div>
+        <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8 rounded-2xl font-overpass">
+          <img src={ilustration} alt="ilustracao de agradecimento" />
+        </div>
+      )
   )
 }
