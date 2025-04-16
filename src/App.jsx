@@ -5,7 +5,7 @@ import { CardFinal } from "./components/CardFinal"
 export function App() {
   const [submited, setSubmited] = useState(false)
   const [rateNote, setRateNote] = useState(0)
-
+// ddddddd
   function handleSubmit() {
     if(rateNote !== 0) {
       setSubmited(true)
